@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Clone a voice from a short reference or design a new voice with OmniVoice."
+      content="Clone a voice from a short reference or design a completely new voice."
     />
     <meta name="theme-color" content="#101113" />
     <title>Echo — Voice Cloner</title>
@@ -28,9 +28,9 @@
           <span>Echo</span>
         </a>
 
-        <div class="model-state" title="k2-fsa/OmniVoice Hugging Face Space">
+        <div class="model-state" title="Connected voice model">
           <span class="status-dot" aria-hidden="true"></span>
-          <span>OmniVoice</span>
+          <span>Voice model</span>
           <span class="model-note">600+ languages</span>
         </div>
       </header>
@@ -148,7 +148,7 @@
                 <div class="result-loading" data-result-loading hidden>
                   <div class="sound-loader" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
                   <h2>Generating your voice</h2>
-                  <p data-status-message>Preparing OmniVoice…</p>
+                  <p data-status-message>Preparing the voice model…</p>
                 </div>
                 <div class="result-ready" data-result-ready hidden>
                   <div class="success-icon" aria-hidden="true">✓</div>
@@ -223,12 +223,12 @@
                 <div class="result-empty" data-result-empty>
                   <div class="orb orb-alt" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
                   <h2>Design a new voice</h2>
-                  <p>Choose its character and let OmniVoice create a natural voice from your settings.</p>
+                  <p>Choose its character and create a natural voice from your settings.</p>
                 </div>
                 <div class="result-loading" data-result-loading hidden>
                   <div class="sound-loader" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
                   <h2>Designing your voice</h2>
-                  <p data-status-message>Preparing OmniVoice…</p>
+                  <p data-status-message>Preparing the voice model…</p>
                 </div>
                 <div class="result-ready" data-result-ready hidden>
                   <div class="success-icon" aria-hidden="true">✓</div>
@@ -255,7 +255,7 @@
       </main>
 
       <footer>
-        <p>Audio is generated directly by <a href="https://huggingface.co/spaces/k2-fsa/OmniVoice" target="_blank" rel="noreferrer">k2-fsa/OmniVoice</a>. Your upload is not stored on GitHub.</p>
+        <p>Audio is processed by the connected inference service. Your upload is not stored on GitHub.</p>
         <p>Only use voices you have permission to use.</p>
       </footer>
     </div>

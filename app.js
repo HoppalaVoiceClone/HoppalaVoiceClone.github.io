@@ -241,7 +241,7 @@ function showResult(form, result) {
 function friendlyError(error) {
   const raw = String(error?.message || error || "");
   if (/gpu|quota|queue|capacity|busy/i.test(raw)) return "The model is busy right now. Please try again in a few minutes.";
-  if (/fetch|network|connection|cors/i.test(raw)) return "Could not reach OmniVoice. Check your internet connection and try again.";
+  if (/fetch|network|connection|cors/i.test(raw)) return "Could not reach the voice service. Check your internet connection and try again.";
   if (/reference audio|ref_aud/i.test(raw)) return "The reference audio could not be read. Try another audio file.";
   return raw.replace(/^Error:\s*/i, "") || "Something unexpected happened. Please try again.";
 }
@@ -253,7 +253,7 @@ async function submitClone(event) {
   if (!referenceFile) { showToast("Upload or record a reference voice first."); $("#upload-zone").focus(); return; }
   const data = new FormData(form);
   setBusy(form, true);
-  setResultState(form, "loading", "Connecting to the OmniVoice model…");
+  setResultState(form, "loading", "Connecting to the voice model…");
   try {
     const client = await connectClient();
     $("[data-status-message]", form).textContent = "Processing the reference and generating speech…";
@@ -280,7 +280,7 @@ async function submitDesign(event) {
   if (!form.reportValidity()) return;
   const data = new FormData(form);
   setBusy(form, true);
-  setResultState(form, "loading", "Connecting to the OmniVoice model…");
+  setResultState(form, "loading", "Connecting to the voice model…");
   try {
     const client = await connectClient();
     $("[data-status-message]", form).textContent = "Creating a new voice with your selected character…";
