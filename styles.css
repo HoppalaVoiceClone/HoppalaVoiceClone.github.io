@@ -37,7 +37,11 @@ button, input, textarea, select { font: inherit; }
 button, select { cursor: pointer; }
 a { color: inherit; }
 
-.shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+.shell {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding-bottom: clamp(40px, 6vw, 72px);
+}
 
 .topbar {
   height: 74px;
