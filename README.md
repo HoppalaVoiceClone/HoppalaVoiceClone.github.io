@@ -1,4 +1,4 @@
-# Echo
+# Hoppala Voice
 
 A minimal voice cloning and voice design interface powered by a Hugging Face Space API and hosted on GitHub Pages.
 
