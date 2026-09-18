@@ -2,6 +2,7 @@ import { Client, handle_file } from "https://cdn.jsdelivr.net/npm/@gradio/client
 
 const SPACE_ID = "Anil465423/HoppalaVoice-OmniVoice";
 const SPACE_URL = "https://anil465423-hoppalavoice-omnivoice.hf.space";
+const HF_TOKEN = "__HF_TOKEN__";
 const MAX_FILE_SIZE = 30 * 1024 * 1024;
 
 let apiClient;
@@ -25,7 +26,9 @@ function showToast(message) {
 
 function connectClient() {
   if (!apiClient) {
+    const auth = HF_TOKEN.startsWith("hf_") ? { token: HF_TOKEN } : {};
     apiClient = Client.connect(SPACE_ID, {
+      ...auth,
       status_callback: (status) => {
         const message = status?.message || status?.detail;
         if (message) $$('[data-status-message]').forEach((el) => { el.textContent = message; });
