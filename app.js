@@ -1,7 +1,7 @@
 import { Client, handle_file } from "https://cdn.jsdelivr.net/npm/@gradio/client@2.6.0/dist/index.min.js";
 
-const SPACE_ID = "k2-fsa/OmniVoice";
-const SPACE_URL = "https://k2-fsa-omnivoice.hf.space";
+const SPACE_ID = "Anil465423/HoppalaVoice-OmniVoice";
+const SPACE_URL = "https://anil465423-hoppalavoice-omnivoice.hf.space";
 const MAX_FILE_SIZE = 30 * 1024 * 1024;
 
 let apiClient;
